@@ -54,13 +54,19 @@ body {
 }
 </style>
 <script>
+function showNotification() {
+const notification = new Notification("تجربة للاشعارات", {
+  body: "مرحبا عزيزي , نحن نقوم بتجربة الاشعارات"
+});
+}
+
   console.log(Notification.permission);
 
   if(Notification.permission === "granted") {
-    alert("we have permission!");
-  } else if(Notification.permission === "denied" || Notification.permission === "default") {
+    showNotification();
+  } else if(Notification.permission !== "denied") {
     Notification.requestPermission().then(permission => {
-        console.log(permission);
+      showNotification();
     });
   }
 </script>
