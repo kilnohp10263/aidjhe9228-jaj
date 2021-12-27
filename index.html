@@ -62,6 +62,10 @@ body {
   left: 350px;
   top: 350px;
 }
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
 </style>
 </head>
 <body>
@@ -81,8 +85,10 @@ body {
   </div>
   <div class="choose">
     <h2 style="color: white; font-size: 20px;">نحن نعمل على اضافة الاشعارات داخل التطبيق <br>عند بداية المباراة , هل يعجبك هذا الشيء ؟</h2>
+    <div class="buttons">
     <button class="select-button" onclick="yes()">نعم</button>
     <button class="select-button" onclick="no()">لا</button>
+  </div>
   </div>
   <!--
   <div class="match" style="position: relative; top: 150px;">
